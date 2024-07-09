@@ -16,6 +16,14 @@
 }
 
 @layer components {
+  .static-nav {
+    @apply bg-transparent;
+  }
+
+  .scrolled {
+    @apply bg-white;
+  }
+
   .nav-opt {
     @apply inline-block md:w-28 w-72 md:h-10 hover:bg-nav-bg hover:opacity-70 bg-contain bg-center bg-no-repeat text-7xl font-bold md:font-normal md:text-2xl hover:text-white py-8 md:px-6 md:py-1;
   }
@@ -31,18 +39,17 @@
   .nav-contact {
     @apply md:w-36 md:bg-[length:9rem_2.5rem] bg-contain w-96;
   }
+
+  .services-bg {
+    @apply bg-serv-bg bg-no-repeat bg-scroll bg-cover bg-center;
+  }
+}
+.btn-more {
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #fff 35%, transparent 35%) 100% 1;
 }
 
-.scrolled {
-  background-color: white;
-}
-
-.static {
-  background-color: transparent;
-}
-
-.bg-pattern {
-  background-image: url(./assets/pattern.png);
-  background-repeat: no-repeat;
-  background-size: fill;
+.btn-more:hover {
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #fff 100%, transparent 100%) 100% 1;
 }

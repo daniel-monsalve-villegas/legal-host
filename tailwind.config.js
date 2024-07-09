@@ -14,9 +14,11 @@ export default {
       black: "#1a1a1a",
       "legal-red": "8c0000",
       "legal-cyan": "#06adc9",
+      transparent: "rgba(0, 0, 0, 0)",
     },
     backgroundImage: {
       "nav-bg": "url(./src/assets/verdeNav.avif)",
+      "serv-bg": "url(./src/assets/pattern.avif)",
     },
   },
   plugins: [],
