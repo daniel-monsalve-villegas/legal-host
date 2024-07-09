@@ -1,28 +1,8 @@
-import homeOne from "../assets/homeOne.avif";
-import homeTwo from "../assets/homeTwo.avif";
-import homeThree from "../assets/homeThree.avif";
+import slides from "../data/carouselData";
 import "../index.css";
 import { useEffect, useState } from "react";
 
 function Carousel() {
-  const slides = [
-    {
-      img: homeOne,
-      category: "Tecnología",
-      desc: "Innovación en los servicios jurídicos",
-    },
-    {
-      img: homeTwo,
-      category: "Inmobiliaria",
-      desc: "Perspectivas de crecimiento inmobiliario",
-    },
-    {
-      img: homeThree,
-      category: "Comercial",
-      desc: "Publicidad engañosa en redes sociales",
-    },
-  ];
-
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

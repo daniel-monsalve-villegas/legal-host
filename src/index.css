@@ -44,6 +44,7 @@
     @apply bg-serv-bg bg-no-repeat bg-scroll bg-cover bg-center;
   }
 }
+
 .btn-more {
   border-bottom: 5px solid;
   border-image: linear-gradient(to right, #fff 35%, transparent 35%) 100% 1;
@@ -52,4 +53,21 @@
 .btn-more:hover {
   border-bottom: 5px solid;
   border-image: linear-gradient(to right, #fff 100%, transparent 100%) 100% 1;
+}
+
+.card-slider {
+  overscroll-behavior-inline: contain;
+}
+
+.card-slide > img {
+  inline-size: 100%;
+}
+
+.card-snaps {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+
+.card-snaps > * {
+  scroll-snap-align: start;
 }
