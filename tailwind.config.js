@@ -17,9 +17,9 @@ export default {
       transparent: "rgba(0, 0, 0, 0)",
     },
     backgroundImage: {
-      "nav-bg": "url(./src/assets/verdeNav.avif)",
-      "serv-bg": "url(./src/assets/pattern.avif)",
-      "contact-bg": "url(./src/assets/patternblack.avif)",
+      "nav-bg": "url(./public/verdeNav.avif)",
+      "serv-bg": "url(./public/pattern.avif)",
+      "contact-bg": "url(./public/patternblack.avif)",
     },
   },
   plugins: [],
