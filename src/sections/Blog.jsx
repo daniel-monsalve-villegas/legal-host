@@ -1,13 +1,15 @@
 import CardsCarousel from "../components/CardsCarousel";
+import { Element } from "react-scroll";
 
 function Blog() {
   return (
-    <div
+    <Element
       name="blog"
+      id="blog"
       className="w-full h-screen flex justify-center items-center bg-black text-white"
     >
       <CardsCarousel />
-    </div>
+    </Element>
   );
 }
 

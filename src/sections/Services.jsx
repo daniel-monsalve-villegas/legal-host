@@ -6,6 +6,7 @@ function Services() {
   return (
     <Element
       name="servicios"
+      id="serivicios"
       className="w-full h-screen flex justify-center items-start services-bg"
     >
       <div className="w-1/2 flex justify-center mt-24">
