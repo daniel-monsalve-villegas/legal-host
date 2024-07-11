@@ -1,5 +1,5 @@
 import posts from "../data/cardData";
-import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "../index.css";
 import { useRef, useState } from "react";
 
@@ -34,13 +34,13 @@ export default function CardsCarousel() {
         )}
       </button>
       <div
-        className="grid grid-flow-col auto-cols-[32%] w-11/12 gap-4 overflow-x-scroll px-4 pb-4 card-slider card-snaps"
+        className="grid grid-flow-col auto-cols-[50%] w-9/12 gap-4 overflow-x-scroll px-4 pb-4 card-slider card-snaps"
         ref={scrollRef}
       >
         {posts.map((post) => (
           <div
             key={post.title}
-            className=" grid grid-rows-[min-content] gap-4 p-4 card-slide"
+            className=" grid grid-rows-[min-content] w-10/12 gap-4 p-4 card-slide"
           >
             <figure>
               <img
@@ -56,7 +56,7 @@ export default function CardsCarousel() {
         ))}
       </div>
       <button
-        className="mr-12 pl-12"
+        className="mr-12 pl-4"
         onClick={() => scrollButton(scrollSize)}
         disabled={bottom}
       >
