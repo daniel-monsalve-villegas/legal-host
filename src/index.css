@@ -43,6 +43,10 @@
   .services-bg {
     @apply bg-serv-bg bg-no-repeat bg-scroll bg-cover bg-center;
   }
+
+  .btn-services {
+    @apply grid rounded-full border-4 border-gray-300 px-5 py-[0.35rem] text-[#065951] font-semibold tracking-wider hover:bg-gray-300;
+  }
 }
 
 .btn-more {
@@ -74,4 +78,9 @@
 
 .card-slide > img {
   inline-size: 100%;
+}
+
+.btn-more-serv {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #000 75%, transparent 75%) 100% 1;
 }
