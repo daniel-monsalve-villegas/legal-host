@@ -18,7 +18,7 @@ export default {
       },
       backgroundImage: {
         "nav-bg": "url(/verdeNav.avif)",
-        "serv-bg": "url(/pattern.avif)",
+        "serv-bg": "url(/services.avif)",
         "contact-bg": "url(/patternblack.avif)",
       },
     },

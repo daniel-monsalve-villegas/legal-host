@@ -1,7 +1,10 @@
+import { Element } from "react-scroll";
+
 function Contact() {
   return (
-    <div
+    <Element
       name="contacto"
+      id="contacto"
       className="w-full h-screen flex flex-col justify-center items-center bg-contact-bg text-white font-roboto"
     >
       <h2 className="text-9xl">Contacto</h2>
@@ -35,7 +38,7 @@ function Contact() {
           className="mt-5"
         ></textarea>
       </form>
-    </div>
+    </Element>
   );
 }
 
