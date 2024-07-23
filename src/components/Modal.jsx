@@ -2,7 +2,7 @@ import { TfiClose } from "react-icons/tfi";
 
 export default function Module() {
   return (
-    <div className="w-1/2 h-1/2 font-roboto">
+    <div className="w-1/2 h-1/2 font-roboto absolute bg-gray-300 rounded-3xl top-full mt-40 left-1/4">
       <button>
         <TfiClose />
       </button>
