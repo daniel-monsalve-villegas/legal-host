@@ -1,17 +1,8 @@
 import { Element } from "react-scroll";
-import buttons from "../data/dataButton";
-import { TfiClose } from "react-icons/tfi";
+import ServicesButton from "../components/servicesButton";
 import "../index.css";
-import { useState } from "react";
 
 function Services() {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setShowModal(!showModal);
-  };
-
   return (
     <Element
       name="servicios"
@@ -28,37 +19,26 @@ function Services() {
             ¿Qué servicio buscas?
           </p>
         </div>
-        <div className="w-3/6 flex flex-row flex-wrap my-10">
-          {buttons.map((button) => (
-            <button
-              className="btn-services m-4 text-center hover:animate-bounce"
-              key={button.desc}
-              onClick={handleClick}
-            >
-              {button.desc}
-            </button>
-          ))}
-          {showModal && (
-            <dialog
-              className="font-roboto w-full h-full top-full backdrop-blur-[1px] bg-black/5 flex items-center justify-center"
-              open
-            >
-              <div className="w-1/2 bg-white rounded-3xl p-4">
-                <button onClick={handleClick}>
-                  <TfiClose size={30} />
-                </button>
-                <h2 className="text-6xl font-bold">Lorem Ipsum</h2>
-                <p className="text-2xl">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Error natus, nihil magni nostrum libero accusantium eos veniam
-                  odit quaerat, a minima. Magnam sequi distinctio, facilis
-                  inventore nemo eveniet ipsam ex.
-                </p>
-              </div>
-            </dialog>
-          )}
-        </div>
-        <button className="text-xl font-medium btn-more-serv hover:animate-bounce">
+        <ServicesButton />
+        {/*       <div className="w-1/2 bg-white rounded-3xl p-4"> */}
+        {/*         <button onClick={handleClick}> */}
+        {/*           <TfiClose size={30} /> */}
+        {/*         </button> */}
+        {/*         <h2 className="text-6xl font-bold">Lorem Ipsum</h2> */}
+        {/*         <p className="text-2xl"> */}
+        {/*           Lorem ipsum dolor, sit amet consectetur adipisicing elit. */}
+        {/*           Error natus, nihil magni nostrum libero accusantium eos veniam */}
+        {/*           odit quaerat, a minima. Magnam sequi distinctio, facilis */}
+        {/*           inventore nemo eveniet ipsam ex. */}
+        {/*         </p> */}
+        {/*       </div> */}
+        {/*     </dialog> */}
+        {/*   )} */}
+        {/* </div> */}
+        <button
+          className="text-xl font-medium btn-more-serv"
+          onClick={() => dialogRef.current?.showModal()}
+        >
           Ver todos
         </button>
       </div>
