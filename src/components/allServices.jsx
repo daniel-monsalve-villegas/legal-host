@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import services from "../data/servicesData.js";
 import { TfiClose } from "react-icons/tfi";
-import services from "../data/servicesData";
 
-export default function ServicesButton() {
+export default function AllServices() {
   const [activeService, setActiveService] = useState();
   const dialogRef = useRef(null);
+  const secondDialog = useRef(null);
+
   const b = document.body;
   b.style.setProperty("--st", -document.documentElement.scrollTop + "px");
   const topPage = `${-document.documentElement.scrollTop}px`;
@@ -36,27 +38,31 @@ export default function ServicesButton() {
 
   const closeModal = () => {
     dialogRef.current?.close();
-    setActiveService(undefined);
     enableScroll();
   };
 
+  const secondDialogModal = (service) => {
+    setActiveService(service);
+    secondDialog.current?.showModal();
+  };
+
   return (
-    <div className="w-3/6 flex flex-row flex-wrap my-10">
-      {services.slice(0, 11).map((service) => (
+    <dialog ref={dialogRef} className="w-3/6 flex flex-wrap my-10">
+      {services.map((service) => (
         <button
-          className="btn-services m-4"
+          className="btn-services m-4 text-center"
           key={service.category}
-          onClick={() => setActiveService(service)}
+          onClick={secondDialogModal(service)}
         >
           {service.category}
         </button>
       ))}
-      <dialog ref={dialogRef} className="rounded-3xl w-1/2 bg-white p-4">
+      <dialog ref={secondDialog} className="rounded-3xl w-1/2 bg-white p-4">
         {activeService && (
           <div>
             <button
-              onClick={closeModal}
               className="rounded-full border-4 p-2 border-gray-300"
+              onClick={closeModal}
             >
               <TfiClose size={25} />
             </button>
@@ -67,6 +73,6 @@ export default function ServicesButton() {
           </div>
         )}
       </dialog>
-    </div>
+    </dialog>
   );
 }

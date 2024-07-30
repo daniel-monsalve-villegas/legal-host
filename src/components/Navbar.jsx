@@ -8,6 +8,7 @@ import useScrolling from "../hooks/useScrolling";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isScrolled = useScrolling();
+  const b = document.body;
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
