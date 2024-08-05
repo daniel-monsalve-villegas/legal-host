@@ -1,21 +1,21 @@
 import posts from "../data/cardData";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "../index.css";
 import { useRef, useState } from "react";
+import { TfiArrowLeft, TfiArrowRight } from "react-icons/tfi";
 
 export default function CardsCarousel() {
   const scrollRef = useRef(null);
   const [bottom, setBottom] = useState(false);
   const [top, setTop] = useState(true);
 
-  const scrollSize = 300;
+  const scrollSize = 400;
   const scrollButton = (scrollOffset) => {
     const scrollPosition = (scrollRef.current.scrollLeft += scrollOffset);
     const scrollToTop =
       Math.floor(
         scrollRef.current.scrollWidth - (scrollRef.current.scrollLeft + 1),
       ) <= scrollRef.current.clientWidth;
-    const buttonLeft = scrollPosition <= 290 ? true : false;
+    const buttonLeft = scrollPosition <= 300 ? true : false;
     setBottom(scrollToTop);
     setTop(buttonLeft);
   };
@@ -28,13 +28,13 @@ export default function CardsCarousel() {
         disabled={top}
       >
         {top ? (
-          <FaArrowLeft size={60} color={"gray"} />
+          <TfiArrowLeft size={60} color={"gray"} />
         ) : (
-          <FaArrowLeft size={60} color={"white"} />
+          <TfiArrowLeft size={60} color={"white"} />
         )}
       </button>
       <div
-        className="grid grid-flow-col auto-cols-[50%] w-9/12 gap-4 overflow-x-scroll px-4 pb-4 card-slider card-snaps"
+        className="grid grid-flow-col auto-cols-[49.8%] w-9/12 gap-1 overflow-x-scroll px-4 pb-4 ml-12 card-slider card-snaps"
         ref={scrollRef}
       >
         {posts.map((post) => (
@@ -46,7 +46,7 @@ export default function CardsCarousel() {
               <img
                 src={post.img}
                 alt={post.title}
-                className="aspect-square object-cover"
+                className="aspect-square object-cover w-full"
               />
               <figcaption className="text-3xl">{post.title}</figcaption>
             </figure>
@@ -56,14 +56,14 @@ export default function CardsCarousel() {
         ))}
       </div>
       <button
-        className="mr-12 pl-4"
+        className="mr-6"
         onClick={() => scrollButton(scrollSize)}
         disabled={bottom}
       >
         {bottom ? (
-          <FaArrowRight size={60} color={"gray"} />
+          <TfiArrowRight size={60} color={"gray"} />
         ) : (
-          <FaArrowRight size={60} color={"white"} />
+          <TfiArrowRight size={60} color={"white"} />
         )}
       </button>
     </>

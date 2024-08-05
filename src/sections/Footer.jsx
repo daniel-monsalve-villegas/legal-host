@@ -5,7 +5,7 @@ function Footer() {
     <Element
       name="footer"
       id="footer"
-      className="w-full h-[20vh] bg-legal-red"
+      className="w-full h-[20vh] bg-black"
     ></Element>
   );
 }
