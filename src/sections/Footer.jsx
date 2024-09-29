@@ -9,11 +9,40 @@ function Footer() {
       className="w-full h-[20vh] bg-black text-white"
     >
       <div className="m-auto max-w-screen-xl">
-        <ul className="flex flex-flow flex-nowrap justify-start items-center gap-4 mb-4">
-          <li className="mr-4">
+        <ul className="flex flex-flow flex-nowrap justify-center items-start gap-12 mb-4 p-8 cursor-pointer">
+          <li>
             <ul>
-              {footer.map((element) => (
-                <li key={element.category}>{element.category}</li>
+              {footer.slice(0, 5).map((element) => (
+                <li
+                  key={element.category}
+                  className="first-of-type:text-xl first-of-type:cursor-auto"
+                >
+                  {element.category}
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li className="">
+            <ul>
+              {footer.slice(5, 10).map((element) => (
+                <li
+                  key={element.category}
+                  className="first-of-type:text-xl first-of-type:cursor-auto"
+                >
+                  {element.category}
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li className="">
+            <ul>
+              {footer.slice(10).map((element) => (
+                <li
+                  key={element.category}
+                  className="first-of-type:text-xl first-of-type:cursor-auto"
+                >
+                  {element.category}
+                </li>
               ))}
             </ul>
           </li>

@@ -38,7 +38,7 @@ const footer = [
     desc: "66568",
   },
   {
-    category: "Legal",
+    category: "Comunicación",
   },
   {
     category: "Preguntas Frecuentes",
