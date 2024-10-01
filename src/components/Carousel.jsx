@@ -32,16 +32,16 @@ function Carousel() {
             <img
               src={slide.img}
               alt={slide.category}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover "
             />
 
             <div className="absolute inset-0 h-full w-full">
-              <div className="w-3/4 text-left md:w-2/4 text-white md:ml-24 ml-12 mt-72">
+              <div className="w-3/4 text-left md:w-2/4 text-white md:ml-24 ml-12 mt-72 animate-kenb">
                 <h6 className="md:text-3xl text-xl pb-4">{slide.category}</h6>
                 <p className="md:text-8xl text-5xl font-bold pb-4">
                   {slide.desc}
                 </p>
-                <button className="btn-more md:text-3xl text-xl ml-3">
+                <button className="btn-more md:text-3xl text-xl ml-3 transition ease-in duration-500 hover:-translate-y-1">
                   Leer más
                 </button>
               </div>

@@ -21,6 +21,15 @@ export default {
         "serv-bg": "url(/services.avif)",
         "contact-bg": "url(/patternblack.avif)",
       },
+      keyframes: {
+        animate: {
+          "0%, 100%": { transform: "scale(1.0)" },
+          "50%": { transform: "scale(1.03)" },
+        },
+      },
+      animation: {
+        kenb: "animate 3.7s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
