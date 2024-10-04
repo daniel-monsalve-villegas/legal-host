@@ -89,7 +89,7 @@ export default function CardsCarousel() {
             <button onClick={() => setActivePost(post)}>Leer más</button>
             <dialog
               ref={dialogRef}
-              className="rounded-3xl w-2/3 p-4 bg-black text-white"
+              className="rounded-3xl w-2/3 p-4 bg-black text-white border-4 border-white"
             >
               {activePost && (
                 <div>

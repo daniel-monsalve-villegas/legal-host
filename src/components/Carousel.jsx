@@ -32,7 +32,7 @@ function Carousel() {
             <img
               src={slide.img}
               alt={slide.category}
-              className="h-full w-full object-cover "
+              className="h-full w-full object-cover animate-bgblur"
             />
 
             <div className="absolute inset-0 h-full w-full">

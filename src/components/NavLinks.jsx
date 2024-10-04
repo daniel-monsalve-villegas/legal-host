@@ -18,7 +18,7 @@ const NavLinks = (toggle) => {
             Home
           </Link>
         </li>
-        <li className="nav-opt nav-service">
+        <li className="nav-opt nav-service mx-8">
           <Link
             activeClass="nav-opt nav-active nav-service"
             to="servicios"
