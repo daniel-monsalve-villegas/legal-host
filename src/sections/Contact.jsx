@@ -19,7 +19,7 @@ function Contact() {
           name="name"
           type="text"
           placeholder="camilo rodriguez"
-          className="h-12 mb-3 p-4 text-2xl"
+          className="h-12 mb-3 p-4 text-2xl text-black"
         />
         <label htmlFor="email" className="text-4xl pb-1">
           Correo Electrónico
@@ -28,7 +28,7 @@ function Contact() {
           name="email"
           type="email"
           placeholder="ejemplo@correo.com"
-          className="h-12 mb-3 p-4 text-2xl"
+          className="h-12 mb-3 p-4 text-2xl text-black"
         />
         <textarea
           name="message"
@@ -36,7 +36,7 @@ function Contact() {
           cols="30"
           rows="10"
           placeholder="Escribe tu consulta aquí..."
-          className="mt-5 p-4 text-2xl"
+          className="mt-5 p-4 text-2xl text-black"
         ></textarea>
       </form>
     </Element>
