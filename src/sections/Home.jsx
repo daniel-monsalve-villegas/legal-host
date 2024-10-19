@@ -1,11 +1,12 @@
 import Carousel from "../components/Carousel";
-import { Element } from "react-scroll";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
-    <Element name="home" id="home">
+    <div id="home">
+      <Navbar />
       <Carousel />
-    </Element>
+    </div>
   );
 }
 

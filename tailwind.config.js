@@ -20,6 +20,21 @@ export default {
         "nav-bg": "url(/verdeNav.avif)",
         "serv-bg": "url(/services.avif)",
         "contact-bg": "url(/patternblack.avif)",
+        "dialog-bg": "url(/patter.avif)",
+      },
+      keyframes: {
+        animate: {
+          "0%, 100%": { transform: "scale(1.0)" },
+          "90%": { transform: "scale(1.03)" },
+        },
+        animatebg: {
+          "0%, 100%": { filter: "blur(0px)" },
+          "50%": { filter: "blur(4px)" },
+        },
+      },
+      animation: {
+        kenb: "animate 3.7s ease-in-out infinite",
+        bgblur: "animatebg 3.7s ease-in-out infinite",
       },
     },
   },

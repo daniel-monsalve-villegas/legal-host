@@ -1,14 +1,13 @@
 import logo from "../assets/logoVerde.avif";
-import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import NavLinks from "./NavLinks";
 import useScrolling from "../hooks/useScrolling";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isScrolled = useScrolling();
-  const b = document.body;
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
@@ -24,7 +23,7 @@ const Navbar = () => {
       >
         <Link
           activeClass=""
-          to="home"
+          to="/"
           spy={true}
           smooth={true}
           duration={500}
