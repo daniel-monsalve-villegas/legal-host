@@ -1,58 +1,69 @@
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import "../index.css";
 
-const NavLinks = (toggle) => {
+const NavLinks = () => {
   return (
     <>
       <ul className="text-center flex flex-col items-center h-screen md:h-auto md:block">
-        <li className="nav-opt">
-          <Link
-            activeClass="nav-opt nav-active"
-            className="px-6 py-1"
-            to="home"
+        <li className="inline-block">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "nav-active nav-opt"
+                : "nav-opt text-legal-green";
+            }}
+            to="/"
             spy={true}
             smooth={true}
             duration={500}
-            onClick={toggle}
           >
             Home
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav-opt nav-service mx-8">
-          <Link
-            activeClass="nav-opt nav-active nav-service"
-            to="servicios"
+        <li className="inline-block mx-8">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "nav-opt nav-active nav-service"
+                : "nav-opt nav-service text-legal-green";
+            }}
+            to="/servicios"
             spy={true}
             smooth={true}
             duration={500}
-            onClick={toggle}
           >
             Servicios
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav-opt">
-          <Link
-            activeClass="nav-opt nav-active"
-            to="blog"
+        <li className="inline-block">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "nav-opt nav-active"
+                : "nav-opt text-legal-green";
+            }}
+            to="/blog"
             spy={true}
             smooth={true}
             duration={500}
-            onClick={toggle}
           >
             Blog
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav-opt nav-contact">
-          <Link
-            activeClass="nav-opt nav-active nav-contact"
-            to="contacto"
+        <li className="inline-block mx-8">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "nav-opt nav-active nav-contact"
+                : "nav-opt nav-contact text-legal-green";
+            }}
+            to="/contacto"
             spy={true}
             smooth={true}
             duration={500}
-            onClick={toggle}
           >
             Contacto
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </>

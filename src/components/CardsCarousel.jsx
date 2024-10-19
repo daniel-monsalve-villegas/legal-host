@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import posts from "../data/cardData";
 import "../index.css";
 import { useRef, useState, useEffect } from "react";
@@ -86,7 +87,13 @@ export default function CardsCarousel() {
               <figcaption className="text-3xl">{post.title}</figcaption>
             </figure>
             <p>{post.content.slice(0, 240)}</p>
-            <button onClick={() => setActivePost(post)}>Leer más</button>
+            <Link
+              key={post.id}
+              to={`/blog/${post.id}`}
+              className="text-center round-full border-2 border-white text-xl"
+            >
+              Leer más
+            </Link>
             <dialog
               ref={dialogRef}
               className="rounded-3xl w-2/3 p-4 bg-black text-white border-4 border-white"
