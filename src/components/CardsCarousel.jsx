@@ -1,48 +1,13 @@
 import { Link } from "react-router-dom";
 import posts from "../data/cardData";
 import "../index.css";
-import { useRef, useState, useEffect } from "react";
-import { TfiArrowLeft, TfiArrowRight, TfiClose } from "react-icons/tfi";
+import { useRef, useState } from "react";
+import { TfiArrowLeft, TfiArrowRight } from "react-icons/tfi";
 
 export default function CardsCarousel() {
-  const [activePost, setActivePost] = useState();
   const scrollRef = useRef(null);
-  const dialogRef = useRef(null);
   const [bottom, setBottom] = useState(false);
   const [top, setTop] = useState(true);
-  const b = document.body;
-  b.style.setProperty("--st", -document.documentElement.scrollTop + "px");
-  const topPage = `${-document.documentElement.scrollTop}px`;
-
-  const disableScroll = () => {
-    b.style.position = "fixed";
-    b.style.top = "var(--st, 0)";
-    b.style.inlineSize = "100%";
-    b.style.overflowY = "scroll";
-  };
-
-  const enableScroll = () => {
-    b.style.position = "";
-    b.style.top = "";
-    b.style.inlineSize = "none";
-    b.style.overflowY = "none";
-    window.scrollTo(0, parseInt(topPage || "0") * -1);
-  };
-
-  useEffect(() => {
-    if (!activePost) return;
-    dialogRef.current?.showModal();
-    disableScroll();
-    dialogRef.current?.addEventListener("close", closeModal);
-    return () => {
-      dialogRef.current?.removeEventListener("close", closeModal);
-    };
-  }, [activePost]);
-
-  const closeModal = () => {
-    dialogRef.current?.close();
-    enableScroll();
-  };
 
   const scrollSize = 400;
   const scrollButton = (scrollOffset) => {
@@ -59,7 +24,7 @@ export default function CardsCarousel() {
   return (
     <>
       <button
-        className="ml-12 pr-4"
+        className="ml-12 mr-4 border-2 border-white p-2 hover:bg-legal-green hover:border-legal-green rounded-full focus:border-2 focus:border-legal-green"
         onClick={() => scrollButton(-scrollSize)}
         disabled={top}
       >
@@ -94,41 +59,11 @@ export default function CardsCarousel() {
             >
               Leer más
             </Link>
-            <dialog
-              ref={dialogRef}
-              className="rounded-3xl w-2/3 p-4 bg-black text-white border-4 border-white"
-            >
-              {activePost && (
-                <div>
-                  <button
-                    className="rounded-full border-2 p-2 border-white"
-                    onClick={closeModal}
-                  >
-                    <TfiClose size={25} />
-                  </button>
-                  <div className="flex flex-row">
-                    <figure>
-                      <figcaption className="text-6xl font-bold py-4 ">
-                        {activePost.title}
-                      </figcaption>
-                      <img
-                        src={activePost.img}
-                        alt={activePost.img}
-                        className="p-4 max-h-fit min-w-96 rounded-3xl"
-                      />
-                    </figure>
-                    <p className="text-2xl p-2 mt-24 columns-2">
-                      {activePost.content}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </dialog>
           </div>
         ))}
       </div>
       <button
-        className="mr-6"
+        className="mr-6 rounded-full border-2 border-white p-2 hover:bg-legal-green hover:border-legal-green focus:border-2 focus:border-legal-green"
         onClick={() => scrollButton(scrollSize)}
         disabled={bottom}
       >

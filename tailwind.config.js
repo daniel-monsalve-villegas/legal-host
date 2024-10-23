@@ -21,6 +21,7 @@ export default {
         "serv-bg": "url(/services.avif)",
         "contact-bg": "url(/patternblack.avif)",
         "dialog-bg": "url(/patter.avif)",
+        "blog-bg": "url(./src/assets/pattern.avif)",
       },
       keyframes: {
         animate: {

@@ -5,7 +5,7 @@ function Blog() {
     <div
       name="blog"
       id="blog"
-      className="w-full h-screen flex justify-center items-center bg-black text-white"
+      className="w-full h-screen flex justify-center items-center bg-blog-bg bg-bottom bg-no-repeat bg-cover text-white"
     >
       <CardsCarousel />
     </div>
