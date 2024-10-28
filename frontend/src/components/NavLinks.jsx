@@ -13,9 +13,6 @@ const NavLinks = () => {
                 : "nav-opt text-legal-green";
             }}
             to="/"
-            spy={true}
-            smooth={true}
-            duration={500}
           >
             Home
           </NavLink>
@@ -28,9 +25,6 @@ const NavLinks = () => {
                 : "nav-opt nav-service text-legal-green";
             }}
             to="/servicios"
-            spy={true}
-            smooth={true}
-            duration={500}
           >
             Servicios
           </NavLink>
@@ -43,9 +37,6 @@ const NavLinks = () => {
                 : "nav-opt text-legal-green";
             }}
             to="/blog"
-            spy={true}
-            smooth={true}
-            duration={500}
           >
             Blog
           </NavLink>
@@ -58,9 +49,6 @@ const NavLinks = () => {
                 : "nav-opt nav-contact text-legal-green";
             }}
             to="/contacto"
-            spy={true}
-            smooth={true}
-            duration={500}
           >
             Contacto
           </NavLink>

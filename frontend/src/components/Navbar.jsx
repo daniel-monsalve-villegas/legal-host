@@ -21,14 +21,7 @@ const Navbar = () => {
       <header
         className={`${scrolled[isScrolled]} fixed top-0 z-20 mx-auto flex flex-wrap w-full items-center justify-between pt-4 px-9`}
       >
-        <Link
-          activeClass=""
-          to="/"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="w-20 h-20"
-        >
+        <Link to="/" className="w-20 h-20">
           <img src={logo} alt="legal host logo" />
         </Link>
 
